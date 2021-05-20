@@ -1,0 +1,22 @@
+Question 2:
+
+Consider the following code
+
+setTimeout(() => {
+	console.log("This is a test!");
+}, 0);
+
+someOtherFunction();
+
+Where someOtherFunction() contains arbitrary code, which will not produce any errors or exceptions.
+
+What is the maximum time (in milliseconds) after which the statement 
+
+console.log("This is a test!"); 
+
+is guaranteed to be executed? Explain the reasoning behind your answer.
+
+
+********* MY RESPONSE *********
+
+

@@ -1,0 +1,26 @@
+Question 1:
+
+You are supposed to write a third-party JavaScript script which will be added to arbitrary webpages. This script is responsible for mounting some elements on the webpage. To mount a div with the class “test” and text  “This is a test” as a child of the body element, the following code is used in the script:
+
+document.body.innerHTML += “<div class=‘test’>This is a test</div>”;
+
+Is this a good idea? If not, why so? 
+Is there a better way to do this? If yes, then explain.
+
+
+********* MY RESPONSE *********
+It is not a good idea because if there were an application that had many divs, this code would force it all to be re-parced and mess up other elements that are already built.
+A better way to do this would be to use:
+ document.write(
+  "<div class='test'>This is a test</div>"
+  )
+This would create the div and wouldn't cause the rest of the document to be re-parced.
+
+I first looked at this example from stackoverflow which is how I discovered the re-parsing issue: https://stackoverflow.com/questions/11515383/why-is-element-innerhtml-bad-code
+But I didn't think the example they gave for the solve would be the appropriate solution for this particular question. 
+To find the information on implementing third-party javascript code, I used this resource: https://livebook.manning.com/book/third-party-javascript/chapter-1/98
+
+
+
+
+

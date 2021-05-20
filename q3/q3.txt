@@ -1,0 +1,64 @@
+Question 3:
+
+You are required to design a React based system/library/API which enables users to reorder a list of items via drag and drop. The required features are:
+
+This system must not make any assumption about the type of list, other than the fact that the list is an array, and can be updated with a setter function. The list and its setter (setList) are available to you much like: const [list, setList] = useState([…]); where useState is the react hook.
+
+The system must not make any assumption about how the items of the list will be rendered, the rendering of each list item must be left up to the users of the library. For example, the list
+
+const [list, setList] = useState([
+	{ id: "id1", name: "Some Name 1", photo: "https://some.image1.url" },
+	{ id: "id2", name: "Some Name 2", photo: "https://some.image2.url" },
+	{ id: "id3", name: "Some Name 3", photo: "https://some.image3.url" },
+]);
+
+Could be rendered as 
+
+list.map((item) => (
+	<section key={item.id}>
+		<img src={item.photo} alt={item.name} /> <h3>{item.name}</h3>
+	</section>
+));
+
+Or as
+
+list.map((item) => (
+	<tr key={item.id}>
+		<td>
+			<img src={item.photo} alt={item.name} />
+		</td>
+		<td>
+			<h3>{item.name}</h3>
+		</td>
+	</tr>
+));
+
+Or any other way the user of the library might want to render the items.
+
+The users of the library must be free to render their list however they wish. Your library should just add drag and drop resizing to their lists.
+
+c. Your library must reorder items in the list when the user clicks and drags an item from one location and drops it at another location. You may either implement x-axis ordering or y-axis ordering. The following diagram illustrates the functioning of the library along the x-axis.
+
+
+
+d. Do NOT use class based components, and use functional components (and hooks) instead. You are free to explore other patterns like render-props, Higher Order Components etc.
+TIP: Try to create custom hooks for your library.
+
+e. The library may or may not offer a Component, which could accept the list and its setter. Other API mechanisms are also acceptable
+
+f. The library must provide a way for users to attach listeners to some common custom events that your library uses (like onDragStart for example). You are free to select the event listeners you wish to expose. Try to include all relevant event listeners.
+
+g. You may NOT use any third party library (except react and dependencies installed by create-react-app, of course). You are not required to add in animations, but doing so is a bonus (see the bonus section).
+
+h. You must include a demo of the library in the code submission. The evaluators must be able to use the demo section to see the functioning of the library. Provide clear instructions to access the said demo section. You will not be judged on the quality of the visual design however it should demonstrate the functionality of your library to the maximum extent possible.
+
+You will be judged on
+Your design decisions, and the amount of freedom you can provide to the users of your library, without compromising extensively on ease-of-use of the library. 
+How modular your library is and How easy it is to build upon it to add new features.
+The way you handle edge cases, and invalid / ill-formatted / missing data (via props or otherwise) passed to your library. The library must not crash when invalid data is passed to your components. Errors must be gracefully handled, and appropriate warnings may be raised if needed.
+
+
+BONUS
+
+Adding in animations to your library. You’ll be given bonus points if your library animates elements as it moves them around.
+Adding remote fetch and save functionality. Bonus points will be given to those candidates who implement remote saving to an API endpoint. This implementation must accept appropriate props (like a URL, HTTP method, data mappers etc.) to allow your library to fetch data from a remote API url, and then to save data to another remote endpoint.
