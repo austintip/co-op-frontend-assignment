@@ -18,5 +18,5 @@ is guaranteed to be executed? Explain the reasoning behind your answer.
 
 
 ********* MY RESPONSE *********
-
-
+The statement should load immediately with the page. setTimeout is run asynchronously and doesn't wait for the other functions. If it were running inside of a separate function it may wait for other processes inside of that function to finish before running but as it is written it should run without waiting for other lines of code. 
+I used a repl.it to practice this code and ran a few different tests. I set the timer of 0 to 1000 and 2000 as well as kept one running at 0 and console logged each saying which number they were and shifted the order of each to make sure which would run first. I also used this link from MDN Web Docs to ensure how setTimeout with 0 would work: https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
