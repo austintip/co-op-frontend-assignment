@@ -62,3 +62,8 @@ BONUS
 
 Adding in animations to your library. You’ll be given bonus points if your library animates elements as it moves them around.
 Adding remote fetch and save functionality. Bonus points will be given to those candidates who implement remote saving to an API endpoint. This implementation must accept appropriate props (like a URL, HTTP method, data mappers etc.) to allow your library to fetch data from a remote API url, and then to save data to another remote endpoint.
+ 
+
+ ******* MY RESPONSE *******
+
+ I will use the src folder to code out this library.
