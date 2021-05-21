@@ -1,10 +1,10 @@
 import './App.css';
-import Home from './components/Home'
+import DraggingList from './components/DraggingList';
 
 function App() {
   return (
     <>
-    <Home />
+    <DraggingList />
     </>
   );
 }

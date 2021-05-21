@@ -66,4 +66,9 @@ Adding remote fetch and save functionality. Bonus points will be given to those 
 
  ******* MY RESPONSE *******
 
+ I made use of this resource on the drag and drop implementation: https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
+
+
+
+
  I will use the src folder to code out this library.
