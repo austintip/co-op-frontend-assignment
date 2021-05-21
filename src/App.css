@@ -4,7 +4,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgba(161, 236, 69, 0.566)
+  background-color: rgba(161, 236, 69, 0.566);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 
 }
 
@@ -26,6 +27,7 @@ section {
 
 li {
   list-style: none;
+  font-weight: bolder;
   border: 1px solid black;
   background-color: white;
   box-shadow: black .5em .5em .5em;
@@ -36,6 +38,11 @@ li {
   margin-right: 1.7em;
   margin-top: 2em;
   max-width: 20em;
+}
+
+li:hover{
+  background-image: linear-gradient(blue, white);
+  color: white;
 }
 
 

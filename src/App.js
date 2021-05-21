@@ -3,9 +3,7 @@ import DraggingList from './components/DraggingList';
 
 function App() {
   return (
-    <>
     <DraggingList />
-    </>
   );
 }
 

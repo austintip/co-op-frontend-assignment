@@ -1,11 +1,13 @@
 import { useState } from 'react'
 
 // set the initial state as outside variables for cleaner code inside the component. Also will be easier for users to set their own initial data this way.
+
+// this is some sample data that can be swapped out for other items
 const items = [
-    { name: "Pikachu", url: "https://secure.img1-fg.wfcdn.com/im/02238154/compr-r85/8470/84707680/pokemon-pikachu-wall-decal.jpg" },
+    { name: "Pikachu", url: "https://lh3.googleusercontent.com/proxy/KZ2KHA4lHxKZoWI2sNh_BJQZu_jU0FldrTBnjqcWX8IyHMGooRhamy3L4dJuEnjQaH_suJWi8h8u2qZ_EwWMhbl_zxDBAX-Nbge_vAjtEcTkcVHhLOgE5qs" },
     { name: "Bulbasaur", url: "https://static.pokemonpets.com/images/monsters-images-300-300/1-Bulbasaur.png" },
-    { name: "Squirtle", url: "https://img.pokemondb.net/artwork/large/squirtle.jpg" },
-    { name: "Charmander", url: "https://img.pokemondb.net/artwork/large/charmander.jpg" },
+    { name: "Squirtle", url: "http://static.pokemonpets.com/images/monsters-images-800-800/7-Squirtle.png" },
+    { name: "Charmander", url: "https://clipart.info/images/ccovers/1528080667Charmander-pokemon-transparent.png" },
     { name: "Eevee", url: "https://cdn2.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/1200px-133Eevee.png" },
 ]
 
@@ -37,26 +39,27 @@ const DraggingList = (props) => {
             originalList: list
         });
 
-        // event.dataTransfer.setData("text/html", '')
+        //this makes it work on firefox
+        event.dataTransfer.setData("text/html", '')
     }
     
     const onDragOver = (event) => {
         // prevent the default so it is allowed to be dropped
         event.preventDefault();
 
-        //setting the original list order that will be changed
+        //set the original list order that will be changed
         let newOrder = dragging.originalList;
 
-        // setting the space it was moved from
+        // set the space it was moved from
         const draggingFrom = dragging.draggingFrom;
 
-        //setting the space it is being held over
+        //set the space it is being held over
         const draggingTo = Number(event.currentTarget.dataset.position);
 
         // get the item from the original position
         const itemDragged = newOrder[draggingFrom];
 
-        // filter out item being dragged
+        // filter out the item being dragged
         const remainingItems = newOrder.filter((item, index) => index !== draggingFrom);
 
         //update the new order
@@ -66,7 +69,7 @@ const DraggingList = (props) => {
             ...remainingItems.slice(draggingTo)
         ];
 
-        // check to see if the item has actually been moved
+        // check to see if the item has actually been moved to a new location
         if (draggingTo !== dragging.draggingTo){
             setDragging({
                 ...dragging,
@@ -87,11 +90,6 @@ const DraggingList = (props) => {
             isDragging: false
         });
     }
-
-
-
-
-
 
 
     return (
