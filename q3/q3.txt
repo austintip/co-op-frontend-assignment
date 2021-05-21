@@ -68,7 +68,7 @@ Adding remote fetch and save functionality. Bonus points will be given to those 
 
  I made use of this resource on the drag and drop implementation: https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 
-I had also never done this before, so I looked up a few different tutorials and really enjoyed how this one was written out. I wanted to make sure I found something that taught me how to do it, but also one where I was understanding each step, rather than just seeing code and putting it there without actually learning anything. I wanted to understand the solution and implement it in my own. https://dev.to/florantara/creating-a-drag-and-drop-list-with-react-hooks-4c0i
+I had also never done this before, so I looked up a few different tutorials and really enjoyed how this one was written out. I wanted to make sure I found something that taught me how to do it, but also one where I was understanding each step, rather than just seeing code and putting it there without actually learning anything. I wanted to understand the solution and implement it in my own way. https://dev.to/florantara/creating-a-drag-and-drop-list-with-react-hooks-4c0i
 
 
  I will use the src folder to code out this library.
